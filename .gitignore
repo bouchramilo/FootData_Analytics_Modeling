@@ -1,2 +1,4 @@
 .vscode/
 notebooks/test.ipynb
+pages/test_filters.py
+pages/analyse_filtrer.py
