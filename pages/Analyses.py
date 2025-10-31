@@ -563,9 +563,6 @@ query_q9 = (
     .order_by(desc(subquery.c.buts), desc(subquery.c.total_contributions))
 )
 
-
-
-
 result_q9 = run_query(query_q9)
 
 st.subheader("Classement général des équipes avec la meilleure défense 🥇")
@@ -575,9 +572,6 @@ st.subheader("Visualisation du classement des équipes avec la meilleure défens
 st.bar_chart(result_q9.set_index("Nom_joueur")["total_contributions"])
 
 csv = result_q9.to_csv(index=False).encode('utf-8')
-
-
-
 st.download_button(
     label="📥 Télécharger le classement en CSV",
     data=csv,
@@ -586,10 +580,6 @@ st.download_button(
 )
 
 st.markdown("---")
-
-
-
-
 
 
 
